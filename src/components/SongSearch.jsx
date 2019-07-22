@@ -1,8 +1,9 @@
 import React from 'react';
 import { fetchSongId } from './../actions';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-function SongSearch(){
+function SongSearch({dispatch}){
   let input;
   return (
     <div>
@@ -25,5 +26,8 @@ function SongSearch(){
     </div>
   );
 }
+SongSearch.propTypes = {
+  dispatch: PropTypes.func
+};
 
 export default connect()(SongSearch);
