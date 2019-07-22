@@ -1,4 +1,6 @@
 import React from 'react';
+import { fetchSongId } from './../actions';
+import { connect } from 'react-redux';
 
 function SongSearch(){
   let input;
@@ -24,4 +26,4 @@ function SongSearch(){
   );
 }
 
-export default SongSearch;
+export default connect()(SongSearch);
